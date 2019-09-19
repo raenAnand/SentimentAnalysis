@@ -20,15 +20,15 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous">
   </script>
-
+  
   <!-- Include custom JavaScript -->
-  <script src="static/js/app.js"></script>
+  <script type="text/javascript" src="static/js/app.js"></script>
 </head>
 
 <body>
 
   <!-- Begin page content -->
-  <main role="main" class="container">
+  
     <h1 class="mt-5">Sentiment Analysis with Logistic Regression</h1>
     <h2>Try it out!</h2>
 
@@ -36,19 +36,18 @@
       <form class="form-inline" id="tweet_form" onsubmit="return false">
         <label class="sr-only" for="inlineFormInput">Name</label>
         <input type="text" class="form-control mb-2 mr-sm-2 mb-sm-0" id="tweetText" placeholder="This is an awesome tweet!">
-        <button type="submit" class="btn btn-primary" onclick="classify()">Submit</button>
+        <button type="submit" class="btn btn-primary"  onclick="classify()">Submit</button>
       </form>
     </div>
     <img src="static/img/happy.svg" id="sentimentImg" alt="Tweet sentiment">
-    <p id='probText'></p>
-
+    <div id="chartContainer" style="height: 300px; width: 100%;"></div>
     <footer class="footer">
       <div class="container">
         <span class="text-muted">Sentiment Analysis with Logistic Regression</span>
       </div>
     </footer>
 
-  </main>
+    <script type="text/javascript" src="static/js/canvasjs.min.js"></script>  
 
 </body>
 </html>
